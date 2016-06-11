@@ -1,2 +1,5 @@
-# nico
-pythonå†™çš„è‡ªç”¨ç®€å•å°å·¥å…·=ã€‚= niconiconi~
+##niconiconi~ ?????
+×Ô¼ºÄÃpythonÐ´×ÅÍæµÄ
+
+###pwd ×ÔÖÆÉú³ÉÃÜÂë¹¤¾ß¾ÍÖ»ÊÇËæ»úÀ²... ÀÁµÃÃ¿´Î¶¼Ð´ÁË...
+####²é¿´°ïÖú:python util.py pwd -h
