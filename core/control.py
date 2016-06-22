@@ -13,7 +13,10 @@ class Control(object):
 
             pwd = myPwd.pwd(sys.argv)
             pwd.execute()
-        elif func == 'test':
-            print('test')
+        elif func == 'phone':
+            from phone import phoneInfo
+
+            ph = phoneInfo.phone(sys.argv)
+            ph.execute()
         else:
             print('this function[' + func + '] does not exist...')
