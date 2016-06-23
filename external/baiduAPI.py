@@ -14,5 +14,27 @@ class baiduAPI:
         resp = request.urlopen(req)
         content = resp.read()
         if (content):
-            # {"errNum":0,"retMsg":"success","retData":{"phone":"13512279010","prefix":"1351227","supplier":"\u79fb\u52a8","province":"\u5929\u6d25","city":"\u5929\u6d25","suit":"135\u5361"}}
             return json.loads(content.decode('utf-8'))
+
+    def mobilenumber_format(info, column):
+        try:
+            if '0' == column:
+                return info["retData"]["phone"] + "," + info["retData"]["prefix"] + "," + info["retData"][
+                    "supplier"] + "," + \
+                       info["retData"]["province"] + "," + info["retData"]["city"] + "," + info["retData"]["suit"]
+            data = ''
+            if '1' in column:
+                data = data + info["retData"]["phone"] + ','
+            if '2' in column:
+                data = data + info["retData"]["prefix"] + ','
+            if '3' in column:
+                data = data + info["retData"]["province"] + ','
+            if '4' in column:
+                data = data + info["retData"]["suit"] + ','
+            if '5' in column:
+                data = data + info["retData"]["city"] + ','
+            if '6' in column:
+                data = data + info["retData"]["supplier"] + ','
+            return data[0:len(data) - 1]
+        except:
+            return 'error'
